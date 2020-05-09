@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>{{ page.title }}</title>
 
     <!-- Meta Tags-->
-    <meta name="description" content="Save the date - 16 de maio de 2020">
-    <meta name="keywords" content="Thiago, Isabel, casamento">
-    <meta name="author" content="mix_design">
+    <meta name="description" content="Save the date - 07 de novembro de 2020">
+    <meta name="keywords" content="Thiago, Isabel, Thiago e Isabel, Isabel e Thiago, Thiago & Isabel, Isabel & Thiago, casamento">
+    <meta name="author" content="Thiago Marcolino">
 
     <!-- Viewport Meta-->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -66,8 +66,8 @@
 
     <!-- Load Custom CSS Compiled without JS Start-->
     <noscript>
-        <link rel="stylesheet" th:href="@{css/fonts.min.css}">
-        <link rel="stylesheet" th:href="@{css/main.min.css}">
+        <link rel="stylesheet" href="{{ '/assets/css/fonts.min.css'| relative_url }}">
+        <link rel="stylesheet" href="{{ '/assets/css/main.min.css'| relative_url }}">
     </noscript>
     <!-- Load Custom CSS Compiled without JS End-->
 
