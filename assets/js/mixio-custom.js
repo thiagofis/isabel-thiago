@@ -179,8 +179,8 @@ $(function() {
   // --------------------------------------------- //
   // KBW-Countdown Start
   // --------------------------------------------- //
-  $('#countdown').countdown({until: $.countdown.UTCDate(+10, 2019, 03, 16), format: 'D'});
-  $('#countdown-large').countdown({until: new Date(2020, 5 - 1, 16,19,30), timezone: -2}); 
+  $('#countdown').countdown({until: $.countdown.UTCDate(+10, 2019, 3, 16), format: 'D'});
+  $('#countdown-large').countdown({until: new Date(2020, 11 - 1, 7,19,30), timezone: -2});
   // --------------------------------------------- //
   // KBW-Countdown End
   // --------------------------------------------- //

@@ -14,17 +14,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
     <!-- Template Favicon & Icons Start -->
-    <link rel="shortcut icon" sizes="16x16 24x24 32x32 48x48 64x64 96x96" href="img/favicon/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" sizes="57x57" th:href="@{img/favicon/apple-touch-icon-57x57.png}">
-    <link rel="apple-touch-icon" sizes="60x60" th:href="@{img/favicon/apple-touch-icon-60x60.png}">
-    <link rel="apple-touch-icon" sizes="72x72" th:href="@{img/favicon/apple-touch-icon-72x72.png}">
-    <link rel="apple-touch-icon" sizes="76x76" th:href="@{img/favicon/apple-touch-icon-76x76.png}">
-    <link rel="apple-touch-icon" sizes="114x114" th:href="@{img/favicon/apple-touch-icon-114x114.png}">
-    <link rel="apple-touch-icon" sizes="120x120" th:href="@{img/favicon/apple-touch-icon-120x120.png}">
-    <link rel="apple-touch-icon" sizes="144x144" th:href="@{img/favicon/apple-touch-icon-144x144.png}">
-    <link rel="apple-touch-icon" sizes="152x152" th:href="@{img/favicon/apple-touch-icon-152x152.png}">
-    <link rel="apple-touch-icon" sizes="180x180" th:href="@{img/favicon/apple-touch-icon-180x180.png}">
-    <link rel="icon" type="image/png" sizes="192x192" th:href="@{img/favicon/android-chrome-192x192.png}">
+    <link rel="shortcut icon" sizes="16x16 24x24 32x32 48x48 64x64 96x96" href="{{ '/assets/img/favicon/favicon.ico'| relative_url }}" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="57x57" href="{{ '/assets/img/favicon/apple-touch-icon-57x57.png' | relative_url }}">
+    <link rel="apple-touch-icon" sizes="60x60" href="{{ '/assets/img/favicon/apple-touch-icon-60x60.png' | relative_url }}">
+    <link rel="apple-touch-icon" sizes="72x72" href="{{ '/assets/img/favicon/apple-touch-icon-72x72.png' | relative_url }}">
+    <link rel="apple-touch-icon" sizes="76x76" href="{{ '/assets/img/favicon/apple-touch-icon-76x76.png' | relative_url }}">
+    <link rel="apple-touch-icon" sizes="114x114" href="{{ '/assets/img/favicon/apple-touch-icon-114x114.png'| relative_url }}">
+    <link rel="apple-touch-icon" sizes="120x120" href="{{ '/assets/img/favicon/apple-touch-icon-120x120.png'| relative_url }}">
+    <link rel="apple-touch-icon" sizes="144x144" href="{{ '/assets/img/favicon/apple-touch-icon-144x144.png'| relative_url }}">
+    <link rel="apple-touch-icon" sizes="152x152" href="{{ '/assets/img/favicon/apple-touch-icon-152x152.png'| relative_url }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/img/favicon/apple-touch-icon-180x180.png'| relative_url }}">
+    <link rel="icon" type="image/png" sizes="192x192" href="{{ '/assets/img/favicon/android-chrome-192x192.png'| relative_url }}">
     <meta property="og:image" content="img/favicon/og-image-250x250.jpg">
     <!-- Template Favicon & Icons End-->
 
@@ -54,13 +54,13 @@
 
     <!-- Load Fonts CSS Start-->
     <script>
-        loadCSS( "css/fonts.min8a54.css?ver=1.0.0", false, "all" ); // Loading fonts, if the site is located in a subfolder
+        loadCSS( "/assets/css/fonts.min8a54.css?ver=1.0.0", false, "all" ); // Loading fonts, if the site is located in a subfolder
     </script>
     <!-- Load Fonts CSS End-->
 
     <!-- Load Custom CSS Start-->
     <script>
-        loadCSS( "css/main.min8a54.css?ver=1.0.0", false, "all" );
+        loadCSS( "/assets/css/main.min8a54.css?ver=1.0.0", false, "all" );
     </script>
     <!-- Load Custom CSS End-->
 
@@ -81,10 +81,10 @@
 
 <!-- Old Browsers Support Start-->
 <!--[if lt IE 9]>
-<script th:src="@{js/libs/es5-shim.min.js}"></script>
-<script th:src="@{js/libs/html5shiv.min.js}"></script>
-<script th:src="@{js/libs/html5shiv-printshiv.min.js}"></script>
-<script th:src="@{js/libs/respond.min.js}"></script>
+<script src="{{ '/assets/js/libs/es5-shim.min.js'| relative_url }}"></script>
+<script src="{{ '/assets/js/libs/html5shiv.min.js'| relative_url }}"></script>
+<script src="{{ '/assets/js/libs/html5shiv-printshiv.min.js'| relative_url }}"></script>
+<script src="{{ '/assets/js/libs/respond.min.js'| relative_url }}"></script>
 <![endif]-->
 <!-- Old Browsers Support End-->
 
@@ -92,8 +92,7 @@
 {{ content }}
 
 
-<script th:src="@{js/libs.min.js}"></script>
-<script th:src="@{js/mixio-custom.js}"></script>
-
+<script src="{{ '/assets/js/libs.min.js'| relative_url }}"></script>
+<script src="{{ '/assets/js/mixio-custom.js'| relative_url }}"></script>
 </body>
 </html>

@@ -17,23 +17,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
     <!-- Template Favicon & Icons Start -->
-    <link rel="shortcut icon" sizes="16x16 24x24 32x32 48x48 64x64 96x96" href="img/favicon/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" sizes="57x57" th:href="@{img/favicon/apple-touch-icon-57x57.png}">
-    <link rel="apple-touch-icon" sizes="60x60" th:href="@{img/favicon/apple-touch-icon-60x60.png}">
-    <link rel="apple-touch-icon" sizes="72x72" th:href="@{img/favicon/apple-touch-icon-72x72.png}">
-    <link rel="apple-touch-icon" sizes="76x76" th:href="@{img/favicon/apple-touch-icon-76x76.png}">
-    <link rel="apple-touch-icon" sizes="114x114" th:href="@{img/favicon/apple-touch-icon-114x114.png}">
-    <link rel="apple-touch-icon" sizes="120x120" th:href="@{img/favicon/apple-touch-icon-120x120.png}">
-    <link rel="apple-touch-icon" sizes="144x144" th:href="@{img/favicon/apple-touch-icon-144x144.png}">
-    <link rel="apple-touch-icon" sizes="152x152" th:href="@{img/favicon/apple-touch-icon-152x152.png}">
-    <link rel="apple-touch-icon" sizes="180x180" th:href="@{img/favicon/apple-touch-icon-180x180.png}">
-    <link rel="icon" type="image/png" sizes="192x192" th:href="@{img/favicon/android-chrome-192x192.png}">
+    <link rel="shortcut icon" sizes="16x16 24x24 32x32 48x48 64x64 96x96" href="{{ '/assets/img/favicon/favicon.ico'| relative_url }}" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="57x57" href="{{ '/assets/img/favicon/apple-touch-icon-57x57.png' | relative_url }}">
+    <link rel="apple-touch-icon" sizes="60x60" href="{{ '/assets/img/favicon/apple-touch-icon-60x60.png' | relative_url }}">
+    <link rel="apple-touch-icon" sizes="72x72" href="{{ '/assets/img/favicon/apple-touch-icon-72x72.png' | relative_url }}">
+    <link rel="apple-touch-icon" sizes="76x76" href="{{ '/assets/img/favicon/apple-touch-icon-76x76.png' | relative_url }}">
+    <link rel="apple-touch-icon" sizes="114x114" href="{{ '/assets/img/favicon/apple-touch-icon-114x114.png'| relative_url }}">
+    <link rel="apple-touch-icon" sizes="120x120" href="{{ '/assets/img/favicon/apple-touch-icon-120x120.png'| relative_url }}">
+    <link rel="apple-touch-icon" sizes="144x144" href="{{ '/assets/img/favicon/apple-touch-icon-144x144.png'| relative_url }}">
+    <link rel="apple-touch-icon" sizes="152x152" href="{{ '/assets/img/favicon/apple-touch-icon-152x152.png'| relative_url }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/img/favicon/apple-touch-icon-180x180.png'| relative_url }}">
+    <link rel="icon" type="image/png" sizes="192x192" href="{{ '/assets/img/favicon/android-chrome-192x192.png'| relative_url }}">
     <meta property="og:image" content="img/favicon/og-image-250x250.jpg">
     <!-- Template Favicon & Icons End-->
 
     <!-- Loader Styles Start-->
-    <link rel="stylesheet" type="text/css"  th:href="@{css/custom.css}" media="screen" />
-    <link rel="stylesheet" type="text/css"  th:href="@{css/facebook-comments.css}" media="screen" />
+    <link rel="stylesheet" type="text/css"  href="{{ '/assets/css/custom.css'| relative_url }}" media="screen" />
+    <link rel="stylesheet" type="text/css"  href="{{ '/assets/css/facebook-comments.css'| relative_url }}" media="screen" />
 
 
     <style>
@@ -62,13 +62,13 @@
 
     <!-- Load Fonts CSS Start-->
     <script>
-        loadCSS( "css/fonts.min8a54.css?ver=1.0.0", false, "all" ); // Loading fonts, if the site is located in a subfolder
+        loadCSS( "/assets/css/fonts.min8a54.css?ver=1.0.0", false, "all" ); // Loading fonts, if the site is located in a subfolder
     </script>
     <!-- Load Fonts CSS End-->
 
     <!-- Load Custom CSS Start-->
     <script>
-        loadCSS( "css/main.min8a54.css?ver=1.0.0", false, "all" );
+        loadCSS( "/assets/css/main.min8a54.css?ver=1.0.0", false, "all" );
     </script>
     <!-- Load Custom CSS End-->
 
@@ -89,40 +89,39 @@
 
 <!-- Old Browsers Support Start-->
 <!--[if lt IE 9]>
-<script th:src="@{js/libs/es5-shim.min.js}"></script>
-<script th:src="@{js/libs/html5shiv.min.js}"></script>
-<script th:src="@{js/libs/html5shiv-printshiv.min.js}"></script>
-<script th:src="@{js/libs/respond.min.js}"></script>
+<script src="{{ '/assets/js/libs/es5-shim.min.js'| relative_url }}"></script>
+<script src="{{ '/assets/js/libs/html5shiv.min.js'| relative_url }}"></script>
+<script src="{{ '/assets/js/libs/html5shiv-printshiv.min.js'| relative_url }}"></script>
+<script src="{{ '/assets/js/libs/respond.min.js'| relative_url }}"></script>
 <![endif]-->
 <!-- Old Browsers Support End-->
 
-
-<div th:replace="fragments/loader :: loader"></div>
+{% include loader.html %}
 <div class="menu-black-layer"></div>
-<nav th:replace="fragments/navigation :: navigation"></nav>
+{% include navigation.html %}
 
 <div id="fullpage">
-    <div th:replace="fragments/countdown :: countdown"></div>
-    <div th:replace="fragments/about-us :: about-us"></div>
-    <div th:replace="fragments/we-are-waiting-for-you :: we-are-waiting-for-you"></div>
-    <div th:replace="fragments/gift-list :: gift-list"></div>
-    <div th:replace="fragments/location :: location"></div>
-    <div th:replace="fragments/facebook-comments :: facebook-comments"></div>
+    {% include countdown.html %}
+    {% include about-us.html %}
+    {% include we-are-waiting-for-you.html %}
+    {% include gift-list.html %}
+    {% include location.html %}
+    {% include facebook-comments.html %}
 </div>
 
 
-<div th:replace="fragments/popup-about-us :: popup-about-us"></div>
-<div th:replace="fragments/popup-facebook-comments :: popup-facebook-comments"></div>
-<div th:replace="fragments/gallary-photo-swipe-element :: gallary-photo-swipe-element"></div>
+{% include popup-about-us.html %}
+{% include popup-facebook-comments.html %}
+{% include gallery-photo-swipe-element.html %}
 
 <!-- Load Scripts Start-->
-<script th:src="@{js/libs.min.js}"></script>
-<script th:src="@{js/gallery-init.js}"></script>
-<script th:src="@{js/mixio-custom.js}"></script>
-<script th:src="@{js/maps/map-dark.js}"></script>
-<script th:src="@{https://maps.googleapis.com/maps/api/js(key='AIzaSyC_eHlYUcq_MCDuQBPwjs5ljaUQ25umFu0')}"></script>
+<script src="{{ '/assets/js/libs.min.js'| relative_url }}"></script>
+<script src="{{ '/assets/js/gallery-init.js'| relative_url }}"></script>
+<script src="{{ '/assets/js/mixio-custom.js'| relative_url }}"></script>
+<script src="{{ '/assets/js/maps/map-dark.js'| relative_url }}"></script>
+<script src="https://maps.googleapis.com/maps/api/js(key='AIzaSyC_eHlYUcq_MCDuQBPwjs5ljaUQ25umFu0')"></script>
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v3.3"></script>
-<script th:src="@{js/popup-facebook-comments.js}" async defer></script>
+<script src="{{ '/assets/js/popup-facebook-comments.js'| relative_url }}" async defer></script>
 <!-- Load Scripts End-->
 
 </body>
